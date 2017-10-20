@@ -182,7 +182,7 @@ class: center, middle
 
 - fetch / download sources
 - verify integrity
-- calculcate version
+- calculate version
 - unpack
 - prepare / patch
 - compile
