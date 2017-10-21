@@ -14,6 +14,7 @@ Daniel Maslowski |
 2. Distribution
 3. Packaging
 4. Building
+5. Getting Started
 
 ---
 
