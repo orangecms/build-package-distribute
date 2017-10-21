@@ -196,7 +196,15 @@ class: center, middle
 
 --
 
-- POSIX
+- [POSIX](http://pubs.opengroup.org/onlinepubs/9699919799/)
+
+
+--
+
+- [`Makefile` conventions](https://www.gnu.org/prep/standards/html_node/Makefile-Conventions.html#Makefile-Conventions)
+  - [`PREFIX`](https://www.freebsd.org/doc/en/books/porters-handbook/porting-prefix.html)
+  - [`DESTDIR`](https://www.dwheeler.com/essays/automating-destdir.html)
+  - [targets](https://www.gnu.org/prep/standards/html_node/Standard-Targets.html#Standard-Targets)
 
 
 --
@@ -224,6 +232,9 @@ class: center, middle
 - name
 - version
 - license
+- description
+- source URLs
+- project homepage
 - dependencies
 
 ---
@@ -279,6 +290,26 @@ class: center, middle
 
 - Java
   - maven
+
+---
+
+class: center, middle
+
+## Getting Started
+
+---
+
+### Guides, Handbooks, Standards
+
+#### ![FreeBSD](img/freebsd.png) [FreeBSD Porter's Handbook](https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/)
+
+#### ![OpenBSD](img/openbsd.png) [OpenBSD Porter's Handbook](http://www.openbsd.org/faq/ports/index.html)
+
+#### ![Arch Linux](img/arch_linux.png) [Arch packaging standards](https://wiki.archlinux.org/index.php/arch_packaging_standards)
+
+#### ![Gentoo](img/gentoo.png) [Gentoo Development Guide](https://devmanual.gentoo.org/)
+
+#### ![Fedora](img/fedora.png) [Creating RPM Packages with Fedora](https://fedoraproject.org/wiki/How_to_create_an_RPM_package)
 
 ---
 
