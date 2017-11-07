@@ -1,0 +1,10 @@
+blockdiag {
+  A -> C, D;
+  B -> E, F;
+  group {
+    color = "#FF0000";
+    shape = line;
+    style = dashed;
+    F -> D, G;
+  }
+}

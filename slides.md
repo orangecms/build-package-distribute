@@ -186,10 +186,14 @@ class: center, middle
 - calculate version
 - unpack
 - prepare / patch
+- configure
 - compile
 - test
-- archive
 - install
+- archive
+
+![Gentoo ebuild functions](https://devmanual.gentoo.org/ebuild-writing/functions/diagram.png)
+
 
 ---
 
@@ -198,6 +202,7 @@ class: center, middle
 --
 
 - [POSIX](http://pubs.opengroup.org/onlinepubs/9699919799/)
+- [Linux Standard Base](https://wiki.linuxfoundation.org/lsb/start)
 
 
 --
@@ -210,21 +215,20 @@ class: center, middle
 
 --
 
-- configure scripts
-- autotools, `cmake`, `qmake`
+- configure scripts, autotools, `cmake`, `qmake`
 
 --
 
 
-- `diff` and `patch`
-- `sed`, `awk`, `grep`
+- `diff` / `patch`, `sed`, `awk`, `grep`
 
 --
 
 
-- platform-specific files
-  - udev rules
-  - init system files
+- platform-specific conventions and utilities
+  - access controls, sandboxing, udev rules, AppArmor profiles, SELinux
+  - init system files (OpenRC, systemd, etc.)
+  - file system hierarchy (e.g., `/usr/local` in BSDs)
 
 ---
 
@@ -244,9 +248,41 @@ class: center, middle
 
 - shared libraries, runtimes, static resources (assets)
 - versions, releases
-- tree
+- graph
   - resolution
   - SAT-solver
+
+![Dependency graph](img/dependency-graph.png)
+
+
+---
+
+### Helper Tools
+
+- skeleton files
+- metadata files and utilities
+  - `mksrcinfo`
+  - `metadata.xml`
+- checksum generators
+  - `updpkgsums`
+  - `ebuild foo.ebuild manifest`
+- package linters
+
+
+---
+
+### Linters / QA Tools
+
+#### ![FreeBSD](img/freebsd.png) [Portlint](https://www.freebsd.org/doc/en/books/porters-handbook/testing-portlint.html)
+
+#### ![Arch Linux](img/arch_linux.png) [Namcap](https://wiki.archlinux.org/index.php/namcap)
+
+#### ![Gentoo](img/gentoo.png) [`pkgcheck`](https://readthedocs.org/projects/pkgcheck/) (used for PRs in CI)
+
+#### [`rpmlint`](https://github.com/rpm-software-management/rpmlint)
+
+#### [`lintian`](https://lintian.debian.org/)
+
 
 ---
 
